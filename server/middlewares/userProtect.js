@@ -33,6 +33,7 @@ module.exports.isUser= async function isUser(req,res,next){
                         else{
                             res.json({
                                 status:false,
+                                Ban:true,
                                 message:"Blocked by the Admin."
                             });
                         }
@@ -40,6 +41,7 @@ module.exports.isUser= async function isUser(req,res,next){
                     else{
                         res.json({
                             status:false,
+                            UnAuth:true,
                             message:"No rights"
                         });
                     }
@@ -64,7 +66,7 @@ module.exports.isUser= async function isUser(req,res,next){
 
         
     }catch (error) {
-        res.status(500).json({
+        res.json({
             message:error.message,
             status:false
         })

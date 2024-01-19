@@ -18,6 +18,7 @@ const NurseModel = require('../models/NurseModel');
 const RequestModel = require('../models/RequestModel');
 const NurseAppsModel = require('../models/NurseAppsModel');
 const UserAppsModel = require('../models/UserAppsModel');
+const authModel = require('../models/authModel');
 
 
 
@@ -129,7 +130,7 @@ module.exports.UserLoginPart2= async function UserLoginPart2(req,res){
                 
                 let auth=await authModel.findOne({UserID:user._id});
                 
-                if(auth.OTP===data.OTP){
+                if(auth.OTP==data.OTP){
 
                     const ip =
                     req.headers['x-forwarded-for'] ||
