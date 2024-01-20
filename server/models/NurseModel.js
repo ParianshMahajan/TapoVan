@@ -8,16 +8,14 @@ const nurseSchema = new Schema({
     },
     Name: {
         type: String,
-        required: true,
+
     },
     Password:{
         type:String,
-        required:true,
         // minLength:6,
     },
     ConfirmPassword:{
         type:String,
-        required:true,
         // minLength:8,
         validate: () => {                                                               
             //Confirming Password....
@@ -30,18 +28,18 @@ const nurseSchema = new Schema({
     Email:{
         type:String,
         unique:true,
-        required: true,
-        validate:function(){
-            return validator.validate(this.Email);
-        }
+
+        // validate:function(){
+        //     return validator.validate(this.Email);
+        // }
     },
     PhoneNumber: {
-        type: Number,
-        required: true,
+        type: String,
+
     },
     Skilled:{
         type:Number,
-        required: true,
+
         // 1--->Skilled;
         // 2--->Semi-Skilled;
         // 3--->UnSkilled;

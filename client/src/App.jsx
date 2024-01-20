@@ -8,6 +8,7 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import ProfileInput from './Pages/SignUp/NurseProfileInput';
 import Location from './Pages/Components/Location/Location';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/> }></Route>
           <Route path="/search" element={<Search/> }></Route>
+          <Route path="/user/dashboard" element={<Dashboard/> }></Route>
           <Route path="/nurse/:id" element={<NurseProfile/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/signup" element={<SignUp/>}></Route>

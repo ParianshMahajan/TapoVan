@@ -6,9 +6,11 @@ import Selector from "./Components/Selectors/Selector";
 import Footer from "../Components/Footer/Footer";
 
 import tapovan from './Assets/Tapovan.mp4'
+import { useNavigate } from "react-router-dom";
 
 
 export default function Home() {
+  const navigate=useNavigate();
   return (
     <>
       <Navbar />
@@ -23,7 +25,7 @@ export default function Home() {
           </p>
 
         </div>
-        <div className="homeSearchCont">
+        <div className="homeSearchCont" onClick={()=>{navigate('/search')}} style={{cursor:"pointer"}}>
           <Searchbar width="60" />
         </div>
 

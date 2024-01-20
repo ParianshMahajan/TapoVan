@@ -2,7 +2,10 @@
 
   .home {
   height: 150vh;
-  background-color: #aad7d9;
+  /* background-color: #aad7d9; */
+  background-image: url('./Assets/background.jpeg') ;
+  background-repeat:no-repeat ;
+  background-size: contain;
   padding: 100px 60px;
 }
 

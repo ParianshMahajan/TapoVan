@@ -5,6 +5,7 @@ import Searchbar from '../Components/Searchbar/Searchbar'
 
 import { FaStar } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import config from '../../config';
 
 export default function Search() {
 
@@ -23,13 +24,16 @@ export default function Search() {
         });
     };
 
+
+    const queryParams = new URLSearchParams(formData).toString();
+    let url=config.apiurl+`/user/search?${queryParams}`;
+
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        const queryParams = new URLSearchParams(formData).toString();
         console.log(queryParams);
 
-        fetch(`http://localhost:8000/search?${queryParams}`).then((response) => response.json())
+        axios.post(url).then((response) => response.json())
             .then((data) => {
                 getsearchres(data);
             })
@@ -41,7 +45,7 @@ export default function Search() {
 
     useEffect(()=>{
         const queryParams = new URLSearchParams(formData).toString();
-        fetch(`http://localhost:8000/search?${queryParams}`).then((response) => response.json())
+        fetch(url).then((response) => response.json())
             .then((data) => {
                 getsearchres(data);
             })
@@ -51,8 +55,8 @@ export default function Search() {
 
     }, []);
 
-    const redirector = async (e) => {
-        const url = "/nurse/" + e.target.id;
+    const redirector = async (id) => {
+        const url = `/nurse/${id}` ;
         navigate(url);
     }
 
@@ -94,7 +98,7 @@ export default function Search() {
                     {
                         searchres.length!=0?
                         searchres.map((result,i) => (
-                            <div className="searchResult" id={result._id} key={i} onMouseDown={redirector}>
+                            <div className="searchResult" id={result._id} key={i} onMouseDown={()=>redirector(result._id)}>
                                 <div className="searchResultLeft">
                                     <h3>{result.Name}</h3>
                                     <p>{result.City} | {result.State}</p>

@@ -1,5 +1,5 @@
 const express=require('express');
-const { apply, sendData, createUser, updateProfile, pastApp, changeSlot, test, selectSlot, verify, UserLogin, UserLoginPart2 } = require('../Controllers/UserFuncs');
+const { apply, sendData, createUser, updateProfile, pastApp, changeSlot, test, selectSlot, verify, UserLogin, UserLoginPart2, sendNurseDet, searchNurse } = require('../Controllers/UserFuncs');
 const { isUser } = require('../middlewares/userProtect');
 const app=express();
 const userRouter=express.Router();
@@ -17,6 +17,16 @@ userRouter
 userRouter
 .route('/login2')
 .post(UserLoginPart2)
+
+
+
+userRouter
+.route('/search')
+.get(searchNurse)
+
+userRouter
+.route('/nurse/:id')
+.get(sendNurseDet)
 
 
 

@@ -629,14 +629,57 @@ module.exports.Ratings= async function Ratings(req,res){
 
 
   
+module.exports.searchNurse= async function searchNurse(req,res){
+    let q = req.query;
+    
+    for(var key in q){
+        if(q[key] == "0"){
+            delete(q[key]);
+        }
+    }
+    console.log(q);
+    const data = await NurseModel.find(q);
+    res.send(data);
+}
   
+module.exports.sendNurseDet= async function sendNurseDet(req,res){
+    console.log(req.params.id);
+    const data = await NurseModel.find({_id: req.params.id});
+    res.send(data);
+}
 
+
+
+const { faker } = require('@faker-js/faker');
 
 module.exports.test= async function test(req,res){
     try {
         
+    const dummyData = [];
+
+    for (let i = 0; i < 10; i++) {
+        const nurseData = {
+            ImgUrl: faker.image.avatar(),
+            Name: faker.internet.displayName(),
+            AboutMe: faker.lorem.paragraph(),
+            Email: faker.internet.email(),
+            PhoneNumber: faker.phone.number(),
+            Skilled: faker.number.int({min: 1, max: 3}),
+            Skills: [],
+            Links: { certificate: faker.internet.url(), achievement: faker.internet.url() },
+            Price: faker.number.int({min: 68, max:500}),
+            Address: faker.location.streetAddress(),
+            City: "Patiala",
+            State: "Punjab",
+            Ratings: faker.number.int({ min: 1, max: 5 }),
+        };
+        let nurse=await NurseModel.create(nurseData);
+        dummyData.push(nurse);
+    }
+
+
         res.json({
-            message:"Test"
+            message:dummyData
         })
     
         

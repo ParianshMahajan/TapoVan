@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
 
-    margin-top: 50px;
+    padding-top: 100px;
 }
 
 .nurseProfileLeft{
@@ -38,4 +38,145 @@
 
 .nurseProfileTable > tbody > tr > td:nth-of-type(1){
     font-weight: bold;
+}
+
+
+
+.profilebuttcont{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.profilebuttcont>div{
+    width: 20%;
+}
+.profilebuttcont>div>button{
+    color: black;
+    border: 2px solid gray;
+    border-radius: 13px;
+    padding: 2% 7%;
+    font-size: 16px;
+    font-weight: 500;
+    transition: ease-in-out 150ms;
+}
+.profilebuttcont>div>button:hover{
+    scale: 1.1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 2000;
+  height: 100vh;
+  width: 100%;
+  background:transparent;
+}
+.popup{
+  position: fixed;
+  z-index: 4000;
+  height: 75vh;
+  top:12%;
+  left: 25%;
+  width: 50%;
+  height: 76vh;
+  border-radius: 20px;
+  background: rgba(24, 177, 204, 0.35);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 19.5px );
+  padding: 2% 12%;
+}
+
+.CrossBtn{
+  right:1.4%;
+  top:3%;
+  font-size: 30px;
+  cursor: pointer;
+  transition: ease-in-out 150ms;
+  border-radius: 50%;
+  padding: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* Ensure the button stays fixed */
+  z-index: 6000; /* Set a higher z-index to ensure it appears above the popup */
+}
+.CrossBtn:hover{
+  scale: 1.3;
+  box-shadow: 0 0 10px white;
+}
+
+
+
+.headingLarge{
+    text-align: center;
+    margin-top: 6%;
+    font-weight: 800;
+    margin-bottom: 8%;
+}
+
+.Requestform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.inputSmall{
+    margin-top: 12%;
+    margin-bottom: 3%;
+    font-size: 18px;
+    padding: 3% 5%;
+}
+.inputLarge{
+    width: 100%;
+    margin-bottom: 3%;
+    border-radius: 12px;
+    min-height: 60px;
+    font-size: 18px;
+    padding: 3% 5%;
+}
+.reviewBox{
+    width:100%;
+    margin-bottom: 3%;
+    border-radius: 12px;
+    min-height: 180px;
+    font-size: 18px;
+    padding: 3% 5%;
+    background-color: white;
+    border: 3px solid rgb(24, 177, 204);
+}
+
+
+.Requestform>button{
+    padding: 3% 6%;
+    width: 40%;
+    background:  rgb(24, 177, 204);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    transition: ease-in-out 150ms;
+}
+
+.Requestform>button:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px rgb(24, 177, 204);
 }
