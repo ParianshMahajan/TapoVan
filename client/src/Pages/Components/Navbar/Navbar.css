@@ -1,12 +1,23 @@
 .navbar{
     padding: 15px 50px;
-    background-color: #BBEBFF;
-    /* position:sticky;
-    top: 0; */
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12.5px );
+    border-radius: 10px;
+    position: fixed;  
+    width: 100vw;
 }
 
 .nav-item > a{
     font-weight: bold;
+    color: #003E58;
+    transition: ease-in 150ms;
+}
+
+.nav-item > a:hover{
+    scale: 1.09;
+    letter-spacing: 1px;
+    transform: translateY(2px);
     color: #003E58;
 }
 
@@ -19,4 +30,31 @@
     background-color: aliceblue;
     padding: 5px 20px;
     font-weight: bolder;
+}
+
+
+
+.navUserDetails{
+  display: flex;  
+  gap:19px
+}
+
+.navUserDetails>div>h4{
+    margin: 0;
+    padding: 0;
+}
+.navUserDetails>div>p{
+    margin: 0;
+    font-size: 15px;
+    padding: 0;
+}
+
+
+.navUserDetails>img{
+    width: 2.8vw;
+    height: 6vh;
+    border-radius: 50%;
+    border: 2px solid #003E58;
+    size:inherit;
+    scale: 1.2;
 }

@@ -6,12 +6,6 @@ const jwt=require('jsonwebtoken');
 const secret_key=process.env.secret_key;
 const cron = require('node-cron');
 
-
-
-
-
-
-
 const { default: getImgurLink } = require('../middlewares/ImgurAPI');
 const UserModel = require('../models/UserModel');
 const NurseModel = require('../models/NurseModel');
@@ -19,6 +13,28 @@ const RequestModel = require('../models/RequestModel');
 const NurseAppsModel = require('../models/NurseAppsModel');
 const UserAppsModel = require('../models/UserAppsModel');
 const authModel = require('../models/authModel');
+
+
+
+// VERIFY
+
+module.exports.verify= async function verify(req,res){
+    try {
+        let user=res.user; 
+        res.json({
+            status:true,
+            Name:user.Name,
+            Email:user.Email,
+        });
+        
+    } catch (error) {
+        res.json({
+            message:error.message,
+            status:false
+        })
+    }
+}
+
 
 
 

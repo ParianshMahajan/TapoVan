@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
+import userpng from './Assets/userpic.jpg'
 
 export default function Navbar() {
+    
+    const[isLogin,setIsLogin]=useState(true);
+    
+    useEffect(()=>{
+
+    },[])
+
     return (
         <>
             <nav class="navbar navbar-expand-lg sticky">
@@ -25,10 +33,22 @@ export default function Navbar() {
                                 <a class="nav-link" href="#">Contact Us</a>
                             </li>
                         </ul>
-                        <form class="d-flex">
+
+                        {!isLogin&&(
+                            <form class="d-flex">
                                 <button class="btn navbtn mx-4" style={{backgroundColor: "transparent"}} type="submit">Login</button>
                                 <button class="btn navbtn" style={{backgroundColor: "#003E58", color:"White"}} type="submit">Sign Up</button>
-                        </form>
+                            </form>
+                        )}
+                        {isLogin&&(
+                            <form class="navUserDetails">
+                                <div>
+                               <h4>Pariansh Mahajan</h4>
+                               <p>parianshm@gmail.com</p>
+                                </div>
+                                <img src={userpng} alt='User Profile Pic'></img>
+                            </form>
+                        )}
                     </div>
                 </div>
             </nav>
