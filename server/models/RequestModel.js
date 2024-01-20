@@ -3,12 +3,11 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 const RequestSchema = new Schema({
-    RecieverId: {
+    NurseId: {
         type: Schema.Types.ObjectId,
     },
     UserId: {
         type: Schema.Types.ObjectId,
-        ref: "user"
     },
     Reason:{
         type:String,

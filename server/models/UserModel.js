@@ -61,10 +61,6 @@ const usersSchema = new Schema({
     Address:{
         type:String, 
     },
-    Report:{
-        type:String,
-        // Report on any kind of misbhave of user with nurse
-    },
     Ban:{
         type:Boolean,
         default:false,

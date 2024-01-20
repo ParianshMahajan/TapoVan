@@ -5,6 +5,7 @@ dotenv.config({ path: "./config.env" });
 
 const UserModel = require('../models/UserModel');
 const RequestModel = require('../models/RequestModel');
+const UserAppsModel = require('../models/UserAppsModel');
 
 
 
@@ -73,7 +74,7 @@ module.exports.acceptRequest= async function acceptRequest(req,res){
         let data=req.body;
         let request =await RequestModel.findById(data.requestID);
 
-        request.Status=true;
+        request.Status=1;
         await request.save();
 
 
@@ -98,10 +99,10 @@ module.exports.acceptRequest= async function acceptRequest(req,res){
 module.exports.ReportUser= async function ReportUser(req,res){
     try {
         let data=req.body;
-        let user =await UserModel.findById(data.userID);
+        let userApp =await UserAppsModel.findById(data.userAppId);
 
-        user.Report=data.Report;
-        await user.save();
+        userApp.Report=data.Report;
+        await userApp.save();
 
         res.json({
             status:true,

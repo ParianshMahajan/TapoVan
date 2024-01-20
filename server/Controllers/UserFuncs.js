@@ -234,12 +234,33 @@ module.exports.negotiateRequest= async function negotiateRequest(req,res){
         let request=await RequestModel.findById(data.requestID);
         
         request.Status=3,
+        request.Reason=data.Reason,
+        request.Requirements=data.Requirements,
         request.Amount=data.Amount,
         request.Duration=data.Duration,
         
         await request.save();
         res.json({
             message:"Request Negotiatation Sent",
+            status:true
+        })
+    }
+    catch(err){
+        res.json({
+            message:err.message
+        })
+    }
+}
+
+
+// Delete a sent Request to a nurse
+module.exports.deleteRequest= async function deleteRequest(req,res){
+    try{
+        let data=req.body;
+        let user=res.user;
+        let request=await RequestModel.findByIdAndDelete(data.requestID);
+        res.json({
+            message:"Request Deleted",
             status:true
         })
     }
@@ -266,6 +287,7 @@ module.exports.AllRequests= async function AllRequests(req,res){
 
             let nurse=await NurseModel.findById(request.UserId);
             request={...request,
+                    _id:nurse._id,
                     ImgUrl:nurse.ImgUrl,
                     Name:nurse.Name,
                     Email:nurse.Email,
