@@ -7,7 +7,6 @@ const DB = process.env.DATABASE.replace("<username>", process.env.USER).replace(
   process.env.PASSWORD
 );
 
-
 mongoose
   .connect(DB)
   .then(function (i) {
