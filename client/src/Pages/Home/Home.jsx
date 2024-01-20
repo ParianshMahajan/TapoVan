@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <div className="home hero">
         <div className="homeHeadings typewriter">
-          <h1 className="homeHead">तपोवन</h1>
+          <h1 className="homeHead">तपोवन्</h1>
           <h4 className="homeTagUp">Sehat Ka Saathi</h4>
      
           <p className="homeTagDown">

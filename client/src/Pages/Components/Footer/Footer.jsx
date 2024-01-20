@@ -11,17 +11,18 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <section>
       <footer className="footer-distributed">
-        <div className="footer-left">
-          <h3>
-            Company<span>logo</span>
+        <div className="footer-left" >
+          <h3 >
+          तपोवन्
           </h3>
-          <p className="footer-links">
+          {/* <p className="footer-links">
             <a href="#" className="link-1">
               Home
             </a>
@@ -30,46 +31,41 @@ const Footer = () => {
             <a href="#">About</a>
             <a href="#">Faq</a>
             <a href="#">Contact</a>
-          </p>
-          <p className="footer-company-name">Company Name © 2015</p>
+          </p> */}
+          <p className="footer-company-name" style={{marginTop:"13px"}}>Company Name © 2015</p>
         </div>
 
         <div className="footer-center">
-          <div>
+          <div style={{marginBottom:"13px"}}>
             <FontAwesomeIcon icon={faMapMarker} />
-            <p>
+            <p style={{marginLeft:"15px"}}>
               <span>Rajpura,Chitkara</span> Punjab
             </p>
           </div>
-          <div>
+          <div style={{marginBottom:"13px"}}>
             <FontAwesomeIcon icon={faPhone} />
-            <p>+911223243243</p>
+            <p style={{marginLeft:"15px"}}>+91 7876768113</p>
           </div>
-          <div>
+          <div style={{marginBottom:"13px"}}>
             <FontAwesomeIcon icon={faEnvelope} />
             <p>
-              <a href="mailto:support@company.com">pariansh@company.com</a>
+              <a style={{marginLeft:"15px", color:"white"}} href="mailto:support@company.com">pariansh@company.com</a>
             </p>
           </div>
         </div>
 
         <div className="footer-right">
           <p className="footer-company-about">
-            <span>About the company</span> Lorem ipsum dolor sit amet,
-            consectateur adispicing elit. Fusce euismod convallis velit, eu
-            auctor lacus vehicula sit amet.
+            <span>About the company</span> Facilitating transparent and efficient booking, our platform enables families to set preferences and recieve a curated list of qualified nurses within their specified range.
           </p>
           <div className="footer-icons">
             <a href="#">
-              <FontAwesomeIcon icon={faFacebook} />
-            </a>
-            <a href="#">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/pariansh-mahajan-3943b625b/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="#">
+            <a href="https://github.com/ParianshMahajan" target="_blank">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </div>
