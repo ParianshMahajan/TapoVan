@@ -11,12 +11,12 @@ export default function Home() {
       <Navbar />
       <div className="home hero">
         <div className="homeHeadings typewriter">
-          <h1 className="homeHead">TapoVann</h1>
+          <h1 className="homeHead">तपोवन</h1>
           <h4 className="homeTagUp">Sehat Ka Saathi</h4>
      
           <p className="homeTagDown">
             24/7 Service, Private Consultation + Emergency Services <br />
-            Starts at just 10$, Exclusively on our mobile app
+            Starts at just 10$, Exclusively on our website
           </p>
 
         </div>
@@ -26,11 +26,10 @@ export default function Home() {
 
         <div className="homeSelectorCont">
           <div className="homeSelector">
-            <h5>Are You Looking For:</h5>
+            {/* <h5>Sign up as:</h5> */}
             <div className="homeSelectors">
-              <Selector id="1" details="lorem ipsum etc etc 1" />
-              <Selector id="2" details="lorem ipsum etc etc 2" />
-              <Selector id="3" details="lorem ipsum etc etc 3" />
+              <Selector id="1" details="Nurse"  />
+              <Selector id="2" details="User"  />
             </div>
           </div>
         </div>

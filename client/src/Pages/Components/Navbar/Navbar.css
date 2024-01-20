@@ -6,8 +6,23 @@
     border-radius: 10px;
     position: fixed;  
     width: 100vw;
+    z-index: 1000;
 }
 
+.buttons{
+    padding-left: 31%;
+}
+
+.logo{
+    font-weight: bold;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    color: #002a3b;
+    font-size: 35px;
+}
+.logo:hover{
+    scale: 1.11;
+    transition: ease-in 150ms;
+}
 .nav-item > a{
     font-weight: bold;
     color: #003E58;

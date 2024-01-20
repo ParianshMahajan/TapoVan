@@ -1,7 +1,9 @@
-.home {
+  @import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Tiro+Devanagari+Hindi&family=Work+Sans:wght@200;300;400;600;700;800&display=swap');
+
+  .home {
   height: 150vh;
   background-color: #aad7d9;
-  padding: 120px 60px;
+  padding: 100px 60px;
 }
 
 .homeHeadings {
@@ -19,7 +21,8 @@
 
 .homeHead {
   font-weight: bold;
-  font-size: 65px;
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 105px;
   letter-spacing: 5px;
 }
 
@@ -44,6 +47,7 @@
 .homeSelector {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 
   width: 60%;
   color: #003e58;
@@ -53,7 +57,7 @@
 
 .homeSelectors {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   margin-top: 20px;
 }
