@@ -5,13 +5,16 @@ import Searchbar from "../Components/Searchbar/Searchbar";
 import Selector from "./Components/Selectors/Selector";
 import Footer from "../Components/Footer/Footer";
 
+import tapovan from './Assets/Tapovan.mp4'
+
+
 export default function Home() {
   return (
     <>
       <Navbar />
       <div className="home hero">
         <div className="homeHeadings typewriter">
-          <h1 className="homeHead">तपोवन्</h1>
+          <h1 className="homeHead" style={{color:"#002130"}}>तपोवन्</h1>
           <h4 className="homeTagUp">Sehat Ka Saathi</h4>
      
           <p className="homeTagDown">
@@ -36,7 +39,12 @@ export default function Home() {
       </div>
 
       <div className="homeVideoCont">
-        <div className="homeVideo"></div>
+        <div className="homeVideo" dangerouslySetInnerHTML={{ __html: `
+        <video class="heroVideo" loop autoplay muted playsinline>
+        <source src=${tapovan} type="video/mp4">
+        Your browser does not support the video tag.
+      </video>           
+    ` }}></div>
         <div className="homeVideoSide leftside">
           <div className="sideIcon"></div>
           <div>
@@ -53,15 +61,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="homeNurseTypes">
+      {/* <div className="homeNurseTypes">
         <h1>
           Hire Top Nurses Online For <br /> Any Health Priority
         </h1>
         <p className="mt-2">
           Lorem ipsum dolor sit amet consectetur adipisicing amet consectetur
           adipisicing.
-        </p>
-
+        </p> */}
+{/* 
         <div className="homeNurseTypeSelectors">
           <div className="homeNurseTypeSelector">
             <img
@@ -105,8 +113,8 @@ export default function Home() {
             />
             <h4>lorem</h4>
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
       <Footer />
     </>
   );

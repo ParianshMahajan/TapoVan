@@ -49,7 +49,7 @@ const Footer = () => {
           <div style={{marginBottom:"13px"}}>
             <FontAwesomeIcon icon={faEnvelope} />
             <p>
-              <a style={{marginLeft:"15px", color:"white"}} href="mailto:support@company.com">pariansh@company.com</a>
+              <a style={{marginLeft:"15px", color:"white"}} href="mailto:parianshm@gmail.com">parianshm@gmail.com</a>
             </p>
           </div>
         </div>

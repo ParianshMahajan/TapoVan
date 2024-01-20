@@ -10,8 +10,7 @@
     background-color: teal;
     width: 70%;
     height: inherit;
-
-    background-image: url("https://images.unsplash.com/photo-1576765607924-3f7b8410a787?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url('./Assets/login.png');
     background-size: cover;
 
     position: relative;
@@ -32,17 +31,22 @@
 .loginRight{
     height: inherit;
     width: 30%;
-
+    background-color: #001220;
+    color: rgb(156, 156, 156);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.loginRight>h3{
+    font-weight: 600;
+    padding-bottom: 5%;
+}
+
 .loginRight > form{
     display: flex;
     flex-direction: column;
-
     width: 70%;
 }
 
@@ -52,12 +56,16 @@
     margin: 10px 0px;
 }
 
+.loginFormGroup > label{
+    font-weight: 500;
+    font-size: 21px;
+}
+
 .loginFormGroup > input{
     width: 100%;
     height: 35px;
     border-radius: 5px;
     margin-top: 5px;
-
     text-transform:lowercase;
 }
 
@@ -72,7 +80,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-bottom: 5%;
     cursor: pointer;
+    transition: ease-in-out 150ms;
 }
 
+
+.loginFormGroup > div.button:hover{
+    background-color: white;
+    border: 3px solid teal;
+    height: 35px;
+    border-radius: 5px;
+    color: teal;
+    height: 40px
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Tiro+Devanagari+Hindi&family=Work+Sans:wght@200;300;400;600;700;800&display=swap');
+
+.homeHead{
+    font-weight: bold;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 65px;
+    color: white;
+    margin-bottom: 6vh;
+}
