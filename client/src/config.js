@@ -1,6 +1,5 @@
 var config = {
-    apiurl : "http://localhost:8000",
-    minPeriod: 4, //months
+    apiurl : "http://localhost:3001",
 }
 
 export default config

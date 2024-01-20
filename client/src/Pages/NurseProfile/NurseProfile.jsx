@@ -42,7 +42,7 @@ export default function NurseProfile() {
                 <div classname="rating">
                 <p className='mt-4 nurseExp'>EXPERIENCE</p>
                 {
-                    [...Array(nurseData.Ratings)].map((a) => (<FaStar />))
+                    [...Array(nurseData.Ratings)].map((a,i) => (<FaStar key={i} />))
                 }
                 </div>
 

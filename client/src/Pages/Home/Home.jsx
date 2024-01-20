@@ -11,12 +11,14 @@ export default function Home() {
       <Navbar />
       <div className="home hero">
         <div className="homeHeadings typewriter">
+          <h1 className="homeHead">TapoVann</h1>
           <h4 className="homeTagUp">Sehat Ka Saathi</h4>
-          <h1 className="homeHead">Nurses for Home</h1>
+     
           <p className="homeTagDown">
             24/7 Service, Private Consultation + Emergency Services <br />
             Starts at just 10$, Exclusively on our mobile app
           </p>
+
         </div>
         <div className="homeSearchCont">
           <Searchbar width="60" />

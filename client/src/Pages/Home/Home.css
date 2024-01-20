@@ -1,7 +1,7 @@
 .home {
   height: 150vh;
   background-color: #aad7d9;
-  padding: 0 60px;
+  padding: 120px 60px;
 }
 
 .homeHeadings {
@@ -194,7 +194,8 @@
   to {
     width: 50%;
   }
-}
+
+  }
 
 @keyframes blink-caret {
   from,

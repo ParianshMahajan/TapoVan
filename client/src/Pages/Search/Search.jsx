@@ -93,8 +93,8 @@ export default function Search() {
 
                     {
                         searchres.length!=0?
-                        searchres.map((result) => (
-                            <div className="searchResult" id={result._id} onMouseDown={redirector}>
+                        searchres.map((result,i) => (
+                            <div className="searchResult" id={result._id} key={i} onMouseDown={redirector}>
                                 <div className="searchResultLeft">
                                     <h3>{result.Name}</h3>
                                     <p>{result.City} | {result.State}</p>
@@ -104,7 +104,7 @@ export default function Search() {
                                     <h4>{result.Price}$</h4>
                                     <div classname="rating">
                                         {
-                                            [...Array(result.Ratings)].map((a) => (<FaStar />))
+                                            [...Array(result.Ratings)].map((a,i) => (<FaStar key={i} />))
                                         }
                                     </div>
                                 </div>

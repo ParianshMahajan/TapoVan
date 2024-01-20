@@ -15,7 +15,7 @@ export default function Searchbar(props) {
                 <div className='locationIcon'><FaLocationDot/></div>
                 <input list='cities' name="browser" id="browser" placeholder='Select City' />
                 <datalist id='cities'>
-                    { Cities.map((cityData) => (<option value={cityData.name + ", " + cityData.stateCode}>{cityData.name + ", " + cityData.stateCode}</option>))}
+                    { Cities.map((cityData,i) => (<option value={cityData.name + ", " + cityData.stateCode} key={i}>{cityData.name + ", " + cityData.stateCode}</option>))}
                 </datalist>
             </div>
             <div className="searchSeperator" />
